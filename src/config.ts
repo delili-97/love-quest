@@ -54,4 +54,8 @@ export const CONFIG = {
   level4Title: 'MISSION COMPLETED!',
   level4Subtitle: 'POWER-UP SUCCESSFULLY UNLOCKED! 🏆',
   finalMessage: 'LOCK IT IN I BELIEVE IN YOU! ❤️',
+
+    level4NextButton: 'ONE LAST THING 💗',
+  level5Title: 'BONUS LEVEL: THE LOVE SIGN',
+  level5Message: 'Good luck with your CATs, HANDSOME. I love you and I’m so proud of you! 🤟❤️',
 }

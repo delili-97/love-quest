@@ -4,9 +4,9 @@ import PixelButton from '../components/PixelButton'
 import { CONFIG } from '../config'
 import type { DateResponse } from '../types'
 
-type Props = { response: DateResponse; onRestart: () => void }
+type Props = { response: DateResponse; onNext: () => void }
 
-export default function Level4Victory({ response, onRestart }: Props) {
+export default function Level4Victory({ response, onNext }: Props) {
   // Turn "2026-12-05" into "Saturday, December 5, 2026"
   const [y, mo, d] = response.date.split('-').map(Number)
   const prettyDate = new Date(y, mo - 1, d).toLocaleDateString('en', {
@@ -43,7 +43,7 @@ export default function Level4Victory({ response, onRestart }: Props) {
       </div>
 
       <h2 className="text-sm text-yellow-200">{CONFIG.finalMessage}</h2>
-      <PixelButton variant="lavender" onClick={onRestart}>PLAY AGAIN</PixelButton>
+            <PixelButton onClick={onNext}>{CONFIG.level4NextButton}</PixelButton>
     </div>
   )
 }

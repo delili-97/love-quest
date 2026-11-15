@@ -22,3 +22,38 @@ body {
 
 @keyframes bob { 50% { transform: translateY(-8px); } }
 .bob { animation: bob 1.2s steps(4) infinite; }
+/* Neon glow with a slight flicker */
+.neon {
+  color: #fff1dc;
+  text-shadow: 0 0 6px #ff5fa2, 0 0 14px #ff5fa2, 0 0 30px #ff2d87, 0 0 60px #ff2d87;
+  animation: flicker 3s infinite steps(1);
+}
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 0.85; }
+  93% { opacity: 1; }
+  96% { opacity: 0.6; }
+  97% { opacity: 1; }
+}
+
+/* Glowing frame around the sign */
+.neon-box {
+  box-shadow: 0 0 0 4px #ff5fa2, 0 0 24px #ff5fa2, inset 0 0 24px rgba(255, 95, 162, 0.4);
+}
+
+/* Hearts drifting up the screen */
+.floaty {
+  position: fixed;
+  bottom: -40px;
+  animation: floatUp linear infinite;
+  pointer-events: none;
+}
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 0; }
+  10% { opacity: 1; }
+  to { transform: translateY(-110vh); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neon, .floaty { animation: none; }
+}
