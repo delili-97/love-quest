@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  background: #120a24;
+  color: #fff1dc;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  image-rendering: pixelated;
+}
+
+/* Pixel-art border made from stacked box-shadows */
+.pixel-box {
+  box-shadow:
+    0 -4px 0 0 #c9a7ff, 0 4px 0 0 #c9a7ff,
+    -4px 0 0 0 #c9a7ff, 4px 0 0 0 #c9a7ff;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+.blink { animation: blink 1s steps(2) infinite; }
+
+@keyframes bob { 50% { transform: translateY(-8px); } }
+.bob { animation: bob 1.2s steps(4) infinite; }
